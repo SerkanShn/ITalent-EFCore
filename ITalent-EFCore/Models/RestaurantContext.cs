@@ -30,7 +30,22 @@ namespace ITalent_EFCore.Models
                 .WithOne(s => s.Employee)
                 .HasForeignKey<Salary>(s => s.EmpId);
 
+            modelBuilder.Entity<Employee>()
+                    .Property(e => e.Name)
+                    .HasMaxLength(100);
+            modelBuilder.Entity<Employee>()
+                    .Property(e => e.Surname)
+                    .HasMaxLength(100);
 
+            modelBuilder.Entity<Department>()
+                    .Property(d => d.Name)
+                    .HasMaxLength(50);
+            modelBuilder.Entity<Department>()
+                    .Property(d => d.Description)
+                    .HasMaxLength(250);
+            modelBuilder.Entity<Title>()
+                    .Property(t => t.TitleName)
+                    .HasMaxLength(100);
 
 
         }
