@@ -10,11 +10,11 @@ namespace ITalent_EFCore.Models
     internal class RestaurantContext : DbContext
     {
 
-        DbSet<Department> Departments { get; set; }
-        DbSet<Employee> Employees { get; set; }
-        DbSet<Location> Locations { get; set; }
-        DbSet<Salary> Salaries { get; set; }
-        DbSet<Title> Titles { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Location> Locations { get; set; }
+        public DbSet<Salary> Salaries { get; set; }
+        public DbSet<Title> Titles { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

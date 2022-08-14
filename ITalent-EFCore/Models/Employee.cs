@@ -12,7 +12,9 @@ namespace ITalent_EFCore.Models
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Email { get; set; }
+        public int TitleId { get; set; }
         public Title Title { get; set; }
+        public int LocationId { get; set; }
         public Location Location { get; set; }
         public Salary Salary { get; set; }
         public ICollection<Department> departments { get; set; } = new List<Department>();
